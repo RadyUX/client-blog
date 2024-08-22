@@ -13,7 +13,7 @@ interface DecodedToken {
 class AuthService {
     login(email: string, password: string) {
       return axios
-        .post("http://localhost:8000/login", {
+        .post("https://blog-api-git-main-radyuxs-projects.vercel.app/login", {
             email,
           password
         })
@@ -28,7 +28,7 @@ class AuthService {
     }
 
     register(name: string, email: string, password: string){
-        return axios.post("http://localhost:8000/create",{
+        return axios.post("https://blog-api-git-main-radyuxs-projects.vercel.app/create",{
             name,
             email,
             password

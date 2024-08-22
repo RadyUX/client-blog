@@ -26,7 +26,7 @@ function Write() {
             const formData = new FormData();
             formData.append('file', file as Blob);
             console.log('file', file);
-            const res = await axios.post('http://localhost:8000/api/upload', formData);
+            const res = await axios.post('https://blog-api-git-main-radyuxs-projects.vercel.app/upload', formData);
             return res.data;
         } catch (err) {
             console.log(err);
@@ -43,7 +43,7 @@ function Write() {
         try {
             state
                 ? await axios.put(
-                      `http://localhost:8000/posts/update/${state.id}`,
+                      `https://blog-api-git-main-radyuxs-projects.vercel.app/posts/update/${state.id}`,
                       {
                           title,
                           content: value,
@@ -57,7 +57,7 @@ function Write() {
                       }
                   )
                 : await axios.post(
-                      `http://localhost:8000/posts/create`,
+                      `https://blog-api-git-main-radyuxs-projects.vercel.app/posts/create`,
                       {
                           title,
                           content: value,

@@ -23,7 +23,7 @@ function Single() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8000/post/${postId}`);
+        const res = await axios.get(`https://blog-api-git-main-radyuxs-projects.vercel.app/post/${postId}`);
         setPost(res.data);
         console.log(res.data);
       } catch (err) {

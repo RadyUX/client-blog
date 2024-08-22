@@ -31,7 +31,7 @@ const handleLogin = async (formValue: FormikValues) => {
   try {
     await login(email, password);
     navigate("/");
-  } catch (error: any ) {
+  } catch (error: any) {
     const resMessage =
       (error.response &&
         error.response.data &&
