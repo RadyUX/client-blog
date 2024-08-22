@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://blog-api-git-main-radyuxs-projects.vercel.app//posts${category}`);
+        const res = await axios.get(`https://blog-api-git-main-radyuxs-projects.vercel.app/posts${category}`);
         setPosts(res.data);
         console.log(res.data);
         console.log(category);
